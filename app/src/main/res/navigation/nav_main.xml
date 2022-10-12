@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="ni.edu.uca.navkevinperez.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="ni.edu.uca.navkevinperez.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_edad"
+            app:destination="@id/edad" />
+        <action
+            android:id="@+id/action_menu_to_factorial"
+            app:destination="@id/factorial" />
+        <action
+            android:id="@+id/action_menu_to_multiplo"
+            app:destination="@id/multiplo" />
+    </fragment>
+    <fragment
+        android:id="@+id/edad"
+        android:name="ni.edu.uca.navkevinperez.Edad"
+        android:label="fragment_edad"
+        tools:layout="@layout/fragment_edad" />
+    <fragment
+        android:id="@+id/factorial"
+        android:name="ni.edu.uca.navkevinperez.Factorial"
+        android:label="fragment_factorial"
+        tools:layout="@layout/fragment_factorial" />
+    <fragment
+        android:id="@+id/multiplo"
+        android:name="ni.edu.uca.navkevinperez.Multiplo"
+        android:label="fragment_multiplo"
+        tools:layout="@layout/fragment_multiplo" />
+</navigation>
